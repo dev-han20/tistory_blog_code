@@ -6,7 +6,7 @@ import java.util.Map;
 public class StudyhMapMethod {
 
 	public static void main(String[] args) {
-		//https://codingnojam.tistory.com/39 포스팅
+		//https://codingnojam.tistory.com/39 포스팅주소
 		
 		Map<String, String> map = new HashMap<>();
 
