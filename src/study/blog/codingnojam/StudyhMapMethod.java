@@ -1,4 +1,4 @@
-package study.algorithm.codingnojam;
+package study.blog.codingnojam;
 
 import java.util.HashMap;
 import java.util.Map;
