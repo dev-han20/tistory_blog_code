@@ -53,12 +53,16 @@ public class Study_Trie {
 	}
 
 	public static void main(String[] args) {
+		// Trie 자료구조 생성
 		CodingNojam_Trie trie = new CodingNojam_Trie();
+		
+		// Trie에 문자열 저장
 		trie.insert("kakao");
 		trie.insert("busy");
 		trie.insert("card");
 		trie.insert("cap");
 		
+		// Trie에 저장 된 문자열 확인
 		System.out.println(trie.search("bus"));		// false
 		System.out.println(trie.search("busy"));    // true
 		System.out.println(trie.search("kakao"));   // true
