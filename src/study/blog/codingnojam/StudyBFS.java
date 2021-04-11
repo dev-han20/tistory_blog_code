@@ -24,7 +24,7 @@ public class StudyBFS {
 		StringBuilder sb = new StringBuilder();
 		// BFS에 사용할 큐를 생성해줍니다.
 		Queue<Integer> q = new LinkedList<Integer>();
-		
+		 
 		// 큐에 BFS를 시작 할 노드 번호를 넣어줍니다.
 		q.offer(start);
 		
