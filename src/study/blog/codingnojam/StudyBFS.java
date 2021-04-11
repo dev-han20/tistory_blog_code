@@ -16,8 +16,7 @@ public class StudyBFS {
 		boolean[] visited = new boolean[9];
 		
 		System.out.println(bfs(1, graph, visited));
-		
-		
+		//출력 내용 : 1 -> 2 -> 3 -> 8 -> 6 -> 5 -> 4 -> 7 -> 
 	}
 	
 	static String bfs(int start, int[][] graph, boolean[] visited) {
@@ -46,7 +45,7 @@ public class StudyBFS {
 				}
 			}
 		}
-		
+		// 탐색순서 리턴
 		return sb.toString() ;
 	}
 }
