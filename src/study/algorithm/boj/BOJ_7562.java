@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Boj7562 {
+public class BOJ_7562 {
 
     public static void main(String[] args) throws IOException {
         // 입출력을 담당할 BufferedReader, BufferedWriter
