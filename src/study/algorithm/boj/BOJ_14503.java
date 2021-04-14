@@ -68,7 +68,7 @@ public class BOJ_14503 {
 					// 뒤로 이동 (i가 3일때만 true로 해줘도 됩니다.)
 					back = true;
 					continue;
-				}else {
+				}else { 
 					// 왼쪽으로 회전
 					robot.direction = leftD;
 					
