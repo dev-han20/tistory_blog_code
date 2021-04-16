@@ -9,7 +9,7 @@
    - [[Algorithm] BOJ-14503 Java로 문제풀이 (구현)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/algorithm/boj/BOJ_14503.java)
    - [[Algorithm] BOJ-7562 Java로 문제풀이 (BFS)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/algorithm/boj/BOJ_7562.java)
    - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_재귀](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/Study_DFS_Recursion.java)
-   - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/Study_DFS_Recursion.java)
+   - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_스택](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/Study_DFS_stack.java)
     
 2. Java
    - [[Java] Map Interface의 유용한 메서드를 알아보자! (Java 8 기준)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/StudyhMapMethod.java)
