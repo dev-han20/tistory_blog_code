@@ -8,7 +8,7 @@ public class BOJ_14503 {
 		// 입력을 받기 위한 객체
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		//11 ~20까지는 문제풀이를 위한 입력정보 초기화입니다.
+		//11 ~20까지는 문제풀이를 위한 입력정보 초기화입니다. 
 		String[] mapSize = br.readLine().split(" ");
 		int[][] map = new int[Integer.parseInt(mapSize[0])][Integer.parseInt(mapSize[1])];
 		String[] info = br.readLine().split(" ");
