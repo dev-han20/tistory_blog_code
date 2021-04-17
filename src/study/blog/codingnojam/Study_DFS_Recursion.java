@@ -1,6 +1,6 @@
 package study.blog.codingnojam;
 
-public class Study_DFS_Recursion {
+public class Study_DFS_recursion {
 
 	// 방문처리에 사용 할 배열선언
 	static boolean[] vistied = new boolean[9];
