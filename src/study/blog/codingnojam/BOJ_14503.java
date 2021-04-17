@@ -1,4 +1,4 @@
-package study.algorithm.boj;
+package study.blog.codingnojam;
 
 import java.io.*;
 
