@@ -11,7 +11,7 @@ public class BOJ_7562 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // 테스트케이스 개수 저장
+        // 테스트케이스 개수 저장 
         int testCaseCount = Integer.parseInt(br.readLine());
 
         // 나이트이 이동 좌표를 계산하기 위한 배열
