@@ -99,7 +99,7 @@ public class BOJ_1753 {
 			
 			// 큐에서 꺼낸 노드에서 이동 가능 한 노드들을 탐색합니다.
 			for (Node linkedNode : graph.get(nodeIndex)) {
-				// 해당노드를 거쳐서 다음 노드로 이동 할 떄의 값이 다음 이동노드의 최단거리테이블의 값보다 작을 때
+				// 해당노드를 거쳐서 다음 노드로 이동 할 떄의 값이 다음 이동노드의 최단거리테이블 값보다 작을 때
 				if(distance + linkedNode.distacne < result[linkedNode.index]) {
 					// if문의 조건을 만족했다면 최단거리테이블의 값을 갱신합니다.
 					result[linkedNode.index] = distance + linkedNode.distacne;
