@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class BOJ_1753 {
+public class Study_Dijkstra {
 	
 	// INF 값 초기화
 	static final int INF = 9999999;
