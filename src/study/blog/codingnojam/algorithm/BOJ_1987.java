@@ -22,11 +22,6 @@ public class BOJ_1987 {
 			map.put(key, 1);
 		}
 		
-//		for (Entry<Character, Integer> ent : map.entrySet()) {
-//			System.out.print(ent.getKey());
-//			System.out.println(ent.getValue());
-//		}
-		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		String[] info = br.readLine().split(" ");
@@ -39,17 +34,12 @@ public class BOJ_1987 {
 			}
 		}
 		
-//		dfs(new Horse(0, 0, 1));
 		dfs(0,0);
-		
 		System.out.println(maxValue);
 	}
 	
 	static void dfs(int r, int c) {
-//		int r = horse.row;
-//		int c = horse.column;
 		maxValue = Math.max(maxValue, count);
-//		horse.map.computeIfPresent(board[r][c], (k,v) -> v-1);
 		map.computeIfPresent(board[r][c], (k,v) -> v-1);
 		
 		for(int i=0; i<moveR.length; i++) {
@@ -63,7 +53,6 @@ public class BOJ_1987 {
 				if(mapValue == 0) {
 					continue;
 				}else {
-//					dfs(new Horse(moveRow, moveColumn, horse.count + 1));
 					count++;
 					dfs(moveRow, moveColumn);
 					map.computeIfPresent(board[moveRow][moveColumn], (k,v) -> v+1);
@@ -72,21 +61,5 @@ public class BOJ_1987 {
 			}
 		}
 	}
-	
-	static class Horse {
-		int row;
-		int column;
-		int count;
-//		Map<Character, Integer> map;
-		
-		Horse(int row, int column, int count) {
-			this.row = row;
-			this.column = column;
-			this.count = count;
-//			this.map = new HashMap<>(map);
-		}
-		
-		
-		
-	}
+
 }
