@@ -5,7 +5,7 @@
    
 1. Algorithm & Data Structure
    - [[Algorithm] BOJ-1987 Java로 문제풀이 (Backtracking)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_1987.java)
-   - [[Algorithm] 다익스트라(Dijkstra) 알고리즘을 Java로 구현해보자! (BOJ_1753 최단경로)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/Study_Dijkstra.java)
+   - [[Algorithm] 다익스트라(Dijkstra) 알고리즘을 Java로 구현해보자! (BOJ-1753 최단경로)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/Study_Dijkstra.java)
    - [[Algorithm] Trie를 Java로 구현해보자!](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/Study_Trie.java)
    - [[Algorithm] BFS(Breadth-first search)를 Java로 구현해보자!](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/StudyBFS.java)
    - [[Algorithm] BOJ-14503 Java로 문제풀이 (구현)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_14503.java)
