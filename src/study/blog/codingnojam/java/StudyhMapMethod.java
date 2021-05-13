@@ -11,9 +11,9 @@ public class StudyhMapMethod {
 		Map<String, String> map = new HashMap<>();
 
 		map.compute("coding", (key, oldValue) -> oldValue == null ? "0" : oldValue + "1");
-		System.out.println(map.get("coding"));	
+		System.out.println(map.get("coding"));
 		// 실행결과 0
-		// key의 값이 있는게 확실 한 경우에만 
+		// key의 값이 있는게 확실 한 경우에만
 		map.compute("coding", (key, oldValue) -> oldValue + "1");
 		System.out.println(map.get("coding"));	
 		// 실행결과 01		
