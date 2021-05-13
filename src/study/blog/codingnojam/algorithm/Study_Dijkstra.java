@@ -46,7 +46,7 @@ public class Study_Dijkstra {
 			String[] temp = br.readLine().split(" ");
 			graph.get(Integer.parseInt(temp[0])).add(new Node(Integer.parseInt(temp[1]), Integer.parseInt(temp[2])));
 		}
-		
+
 		// 문제에서 주어진 입력값을 바탕으로 다익스트라 알고리즘 수행
 		dijkstra(startIndex);
 		
