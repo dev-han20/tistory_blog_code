@@ -2,4 +2,6 @@
 *bin
 *project
 *classpath
+*.idea
+tistory_blog_code.iml
 src/module-info.java
