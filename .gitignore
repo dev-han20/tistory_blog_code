@@ -3,6 +3,6 @@
 *project
 *classpath
 *.idea
-*.out
+*out
 tistory_blog_code.iml
 src/module-info.java
