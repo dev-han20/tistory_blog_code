@@ -6,6 +6,8 @@ public class BOJ_2042 {
 
     public static void main(String[] args) throws IOException {
 
+        segmentTreeInit(16);
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -15,9 +17,16 @@ public class BOJ_2042 {
         for (int i = 1; i <= Integer.parseInt(info[0]); i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
+
+
     }
 
-    public static void segmentTreeInit(){
+    public static void segmentTreeInit(int arrLength){
+        double treeHeight = Math.log(arrLength)/Math.log(2)+1;
+        long treeNodeCount = Math.round(Math.pow(2, treeHeight)-1);
+
+        System.out.println("treeHeight = " + treeHeight);
+        System.out.println("treeNodeCount = " + treeNodeCount);
 
     }
 
