@@ -15,30 +15,24 @@ public class BOJ_2042 {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
+        SegmentTree st = new SegmentTree(10);
+
+
     }
 
     static class SegmentTree{
         private double treeHeight;
         private long treeNodeCount;
 
-        public SegmentTree(int arrLength) {
+        SegmentTree(int arrLength) {
             treeHeight  = Math.log(arrLength)/Math.log(2)+1;
             treeNodeCount = Math.round(Math.pow(2, treeHeight)-1);
         }
 
-    }
-
-    public static void segmentTreeCreate(int arrLength){
-        double treeHeight = Math.log(arrLength)/Math.log(2)+1;
-        long treeNodeCount = Math.round(Math.pow(2, treeHeight)-1);
-
-
-//        System.out.println("treeHeight = " + treeHeight);
-//        System.out.println("treeNodeCount = " + treeNodeCount);
-
-
+        
 
     }
+
 
 }
 
