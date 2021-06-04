@@ -16,20 +16,18 @@ public class BOJ_2042 {
         }
 
         SegmentTree st = new SegmentTree(10);
-
-
     }
 
     static class SegmentTree{
-        private double treeHeight;
         private long treeNodeCount;
 
+        // 생성자에서 트리의 전체노드개수 계산
         SegmentTree(int arrLength) {
-            treeHeight  = Math.log(arrLength)/Math.log(2)+1;
+            double treeHeight = Math.log(arrLength)/Math.log(2)+1;
             treeNodeCount = Math.round(Math.pow(2, treeHeight)-1);
         }
 
-        
+
 
     }
 
