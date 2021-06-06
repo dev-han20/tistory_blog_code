@@ -36,11 +36,16 @@ public class BOJ_2042 {
         }
 
         // 트리 생성을 위한 초기화 메서드
-        void init(long[] arr, int node, int start, int end ){
+        long init(long[] arr, int node, int start, int end ){
             if (start == end) {
-                tree[node]
+                tree[node] = arr[start];
+                return tree[node];
+            }else{
+                return tree[node] = init(arr, node*2, start, (start+end)/2) + init(arr, node*2+1, (start+end)/2+1, end);
             }
         }
+
+
 
 
 
