@@ -45,6 +45,15 @@ public class BOJ_2042 {
             }
         }
 
+        long sum(int node, int start, int end, int left, int right) {
+            if (end < left || right < start) {
+                return 0;
+            } else if (left <= start && end <= right) {
+                return tree[node];
+            } else {
+                return sum(node*2, start, (start+end)/2, left, right) + sum(node*2+1, (start+end)/2+1, end, left, right);
+            }
+        }
 
 
 
