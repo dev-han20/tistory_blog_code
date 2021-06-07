@@ -55,8 +55,16 @@ public class BOJ_2042 {
             }
         }
 
-        void update(int node, int start, int end, int changeIndex, long diff) {
-
+        void update(int node, int start, int end, int index, long diff) {
+            if (index < start || end < index) {
+                return;
+            }else {
+                tree[node] = tree[node] + diff;
+                if (start != end) {
+                    update(node*2, start, (start+end)/2, index, diff) ;
+                    update(node*2+1, (start+end)/2+1, end, index, diff) ;
+                }
+            }
         }
 
 
