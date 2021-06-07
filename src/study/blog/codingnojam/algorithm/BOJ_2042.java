@@ -55,6 +55,9 @@ public class BOJ_2042 {
             }
         }
 
+        void update(int node, int start, int end, int changeIndex, long diff) {
+
+        }
 
 
 
