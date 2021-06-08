@@ -18,9 +18,24 @@ public class BOJ_2042 {
         }
 
         SegmentTree st = new SegmentTree(arr.length);
+        st.init(arr, 1, 1, Integer.parseInt(info[0]));
 
+        for (int i = 0; i < Integer.parseInt(info[1]) + Integer.parseInt(info[2]); i++) {
+            String[] operation = br.readLine().split(" ");
+            if(Integer.parseInt(operation[0]) == 1){
+                long diff = Integer.parseInt(operation[2]) - arr[Integer.parseInt(operation[1])];
+                arr[Integer.parseInt(operation[1])] = Integer.parseInt(operation[2]);
+                st.update(1, 1, Integer.parseInt(info[0]), Integer.parseInt(operation[1]), diff );
+            }else{
+                long result = st.sum(1, 1, Integer.parseInt(info[0]), Integer.parseInt(operation[1]), Integer.parseInt(operation[2]));
+                bw.write(String.valueOf(result));
+                bw.newLine();
+            }
+        }
 
-
+        br.close();
+        bw.flush();
+        bw.close();
 
     }
 
@@ -66,11 +81,6 @@ public class BOJ_2042 {
                 }
             }
         }
-
-
-
     }
-
-
 }
 
