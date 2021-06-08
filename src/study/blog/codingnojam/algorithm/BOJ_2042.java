@@ -2,11 +2,13 @@ package study.blog.codingnojam.algorithm;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BOJ_2042 {
 
     public static void main(String[] args) throws IOException {
+//        SegmentTree sq = new SegmentTree(8);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -17,14 +19,14 @@ public class BOJ_2042 {
             arr[i] = Long.parseLong(br.readLine());
         }
 
-        SegmentTree st = new SegmentTree(arr.length);
+        SegmentTree st = new SegmentTree(Integer.parseInt(info[0]));
         st.init(arr, 1, 1, Integer.parseInt(info[0]));
 
         for (int i = 0; i < Integer.parseInt(info[1]) + Integer.parseInt(info[2]); i++) {
             String[] operation = br.readLine().split(" ");
             if(Integer.parseInt(operation[0]) == 1){
-                long diff = Integer.parseInt(operation[2]) - arr[Integer.parseInt(operation[1])];
-                arr[Integer.parseInt(operation[1])] = Integer.parseInt(operation[2]);
+                long diff = Long.parseLong(operation[2]) - arr[Integer.parseInt(operation[1])];
+                arr[Integer.parseInt(operation[1])] = Long.parseLong(operation[2]);
                 st.update(1, 1, Integer.parseInt(info[0]), Integer.parseInt(operation[1]), diff );
             }else{
                 long result = st.sum(1, 1, Integer.parseInt(info[0]), Integer.parseInt(operation[1]), Integer.parseInt(operation[2]));
@@ -40,14 +42,14 @@ public class BOJ_2042 {
     }
 
     static class SegmentTree{
-        private long treeNodeCount;
+
         private long[] tree;
 
         // 생성자에서 세그먼트트리의 전체노드개수 계산
         SegmentTree(int arrLength) {
-            double treeHeight = Math.log(arrLength)/Math.log(2)+1;
-            treeNodeCount = Math.round(Math.pow(2, treeHeight)-1);
-            tree = new long[(int)treeNodeCount + 1];
+            double treeHeight = Math.ceil(Math.log(arrLength)/Math.log(2))+1;
+            long treeNodeCount = Math.round(Math.pow(2, treeHeight));
+            tree = new long[Math.toIntExact(treeNodeCount)];
         }
 
         // 트리 생성을 위한 초기화 메서드
