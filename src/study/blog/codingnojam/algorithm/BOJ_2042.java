@@ -8,10 +8,11 @@ import java.util.List;
 public class BOJ_2042 {
 
     public static void main(String[] args) throws IOException {
-//        SegmentTree sq = new SegmentTree(8);
+        // 입출력을 위한 객체 생성
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        // 문제해결을 위한 기본 정보 받기
         String[] info = br.readLine().split(" ");
         // 0인덱스는 사용안하기 위해 배열길이 1 추가
         long[] arr = new long[Integer.parseInt(info[0])+1];
