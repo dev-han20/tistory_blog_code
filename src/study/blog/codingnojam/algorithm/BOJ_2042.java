@@ -56,7 +56,6 @@ public class BOJ_2042 {
         br.close();
         bw.flush();
         bw.close();
-
     }
 
     static class SegmentTree{
@@ -81,7 +80,8 @@ public class BOJ_2042 {
                 return tree[node] = arr[start];
             }else{
                 // 리프노드가 아닌 경우에는 자식노드의 값을 더해서 노드의 값 초기화 후 리턴
-                return tree[node] = init(arr, node*2, start, (start+end)/2) + init(arr, node*2+1, (start+end)/2+1, end);
+                return tree[node] = init(arr, node*2, start, (start+end)/2)
+                        + init(arr, node*2+1, (start+end)/2+1, end);
             }
         }
 
@@ -98,7 +98,8 @@ public class BOJ_2042 {
                 // 1. 노드가 가지는 값의 구간이 구하려고 하는 합의 구간에 일부는 속하고 일부는 속하지 않는 경우
                 // 2. 노드가 가지는 값의 구간이 구하려고 하는 합의 구간을 모두 포함하는 경우
                 // 이와 같은 경우에는 자식노드를 탐색해서 값을 리턴
-                return sum(node*2, start, (start+end)/2, left, right) + sum(node*2+1, (start+end)/2+1, end, left, right);
+                return sum(node*2, start, (start+end)/2, left, right)
+                        + sum(node*2+1, (start+end)/2+1, end, left, right);
             }
         }
 
