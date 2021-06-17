@@ -28,28 +28,28 @@ public class BOJ_2457 {
         init(arr, minSegmentTree, 1, 0, n - 1, "min");
         init(arr, maxSegmentTree, 1, 0, n - 1, "max");
 
-        for (int i = 0; i < minSegmentTree.length; i++) {
-            System.out.print("min["+ i + "] = " + minSegmentTree[i]);
-        }
-
-            System.out.println();
-        for (int i = 0; i < minSegmentTree.length; i++) {
-            System.out.print("max["+ i + "] = " + maxSegmentTree[i]);
-        }
-//
-//        for (int i = 0; i < m; i++) {
-//            String[] range = br.readLine().split(" ");
-//            int left = Integer.parseInt(range[0])-1;
-//            int right = Integer.parseInt(range[1])-1;
-//            int minValue = getValue(minSegmentTree, 1, 0, n - 1, left, right, "min");
-//            int maxValue = getValue(maxSegmentTree, 1, 0, n - 1, left, right, "max");
-//            bw.write(String.valueOf(minValue) + " " + String.valueOf(maxValue));
-//            bw.newLine();
+//        for (int i = 0; i < minSegmentTree.length; i++) {
+//            System.out.print("min["+ i + "] = " + minSegmentTree[i]);
 //        }
 //
-//        br.close();
-//        bw.flush();
-//        bw.close();
+//            System.out.println();
+//        for (int i = 0; i < minSegmentTree.length; i++) {
+//            System.out.print("max["+ i + "] = " + maxSegmentTree[i]);
+//        }
+
+        for (int i = 0; i < m; i++) {
+            String[] range = br.readLine().split(" ");
+            int left = Integer.parseInt(range[0])-1;
+            int right = Integer.parseInt(range[1])-1;
+            int minValue = getValue(minSegmentTree, 1, 0, n - 1, left, right, "min");
+            int maxValue = getValue(maxSegmentTree, 1, 0, n - 1, left, right, "max");
+            bw.write(String.valueOf(minValue) + " " + String.valueOf(maxValue));
+            bw.newLine();
+        }
+
+        br.close();
+        bw.flush();
+        bw.close();
     }
 
     public static int init(int[] arr, int[] segmentTree, int node, int start, int end, String minOrMax) {
@@ -59,9 +59,11 @@ public class BOJ_2457 {
             int leftNodeValue = init(arr, segmentTree, node * 2, start, (start + end) / 2, minOrMax);
             int rightNodeValue = init(arr, segmentTree, (node * 2) + 1, (start + end) / 2 + 1, end, minOrMax);
             if (minOrMax.equals("min")) {
-                return Math.min(leftNodeValue, rightNodeValue);
+//                System.out.println("leftNodeValue = " + leftNodeValue);
+//                System.out.println("rightNodeValue = " + rightNodeValue);
+                return segmentTree[node] = Math.min(leftNodeValue, rightNodeValue);
             } else {
-                return Math.max(leftNodeValue, rightNodeValue);
+                return segmentTree[node] = Math.max(leftNodeValue, rightNodeValue);
             }
         }
     }
