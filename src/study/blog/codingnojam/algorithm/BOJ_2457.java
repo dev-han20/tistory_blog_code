@@ -6,20 +6,27 @@ public class BOJ_2457 {
 
     public static void main(String[] args) throws IOException {
 
+        // 입출력을 위한 객체 생성
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        // 문제풀이를 위한 정보 입력 받기
         String[] info = br.readLine().split(" ");
-
+        // 정수의 개수
         int n = Integer.parseInt(info[0]);
+        // 최소,최대값 찾는 횟수
         int m = Integer.parseInt(info[1]);
 
+        // 배열 생성
         int[] arr = new int[n];
 
+        // 배열 초기화
         for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
+        // 세그먼트 트리 전체 노드 수 계산
+        // 세그먼트 트리의 높이
         double treeHeight = Math.ceil(Math.log(n) / Math.log(2)) + 1;
         int treeNodeCount = Math.toIntExact(Math.round(Math.pow(2, treeHeight)));
         int[] minSegmentTree = new int[treeNodeCount];
@@ -27,15 +34,6 @@ public class BOJ_2457 {
 
         init(arr, minSegmentTree, 1, 0, n - 1, "min");
         init(arr, maxSegmentTree, 1, 0, n - 1, "max");
-
-//        for (int i = 0; i < minSegmentTree.length; i++) {
-//            System.out.print("min["+ i + "] = " + minSegmentTree[i]);
-//        }
-//
-//            System.out.println();
-//        for (int i = 0; i < minSegmentTree.length; i++) {
-//            System.out.print("max["+ i + "] = " + maxSegmentTree[i]);
-//        }
 
         for (int i = 0; i < m; i++) {
             String[] range = br.readLine().split(" ");
@@ -59,8 +57,6 @@ public class BOJ_2457 {
             int leftNodeValue = init(arr, segmentTree, node * 2, start, (start + end) / 2, minOrMax);
             int rightNodeValue = init(arr, segmentTree, (node * 2) + 1, (start + end) / 2 + 1, end, minOrMax);
             if (minOrMax.equals("min")) {
-//                System.out.println("leftNodeValue = " + leftNodeValue);
-//                System.out.println("rightNodeValue = " + rightNodeValue);
                 return segmentTree[node] = Math.min(leftNodeValue, rightNodeValue);
             } else {
                 return segmentTree[node] = Math.max(leftNodeValue, rightNodeValue);
@@ -87,6 +83,4 @@ public class BOJ_2457 {
             }
         }
     }
-
-
 }
