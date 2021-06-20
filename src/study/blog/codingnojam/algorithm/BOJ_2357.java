@@ -26,7 +26,7 @@ public class BOJ_2357 {
         }
 
         // 세그먼트 트리 전체 노드 수 계산
-        // 세그먼트 트리의 높이 = logN + 1 (밑이 2인 로그)
+        // 세그먼트 트리의 높이 = logN + 1 (밑이 2인 로그입니다.)
         double treeHeight = Math.ceil(Math.log(n) / Math.log(2)) + 1;
         // 세그먼트 트리의 전체 노드 수 = 2^트리의 높이
         int treeNodeCount = Math.toIntExact(Math.round(Math.pow(2, treeHeight)));
