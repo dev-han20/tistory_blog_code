@@ -7,9 +7,9 @@ import java.util.StringTokenizer;
 public class BOJ_1759 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static int count = 0;
-    static int L;
     static StringBuilder sb = new StringBuilder();
+    static int L;
+    static int passwordCount = 0;
     static int vowelCount = 0;
     static int consCount = 0;
 
@@ -22,35 +22,20 @@ public class BOJ_1759 {
         String[] arr = br.readLine().split(" ");
         boolean[] chk = new boolean[arr.length];
         Arrays.sort(arr);
-
-//        for (int i = 0; i < arr.length; i++) {
-//            System.out.println("arr[i] = " + arr[i]);
-//        }
-
-        permutation(arr, chk);
+        passwordSearch(arr, chk);
 
         br.close();
         bw.flush();
         bw.close();
-
-
     }
 
-    public static void permutation(String[] arr, boolean[] chk) throws IOException {
-        if(count >= L){
+    public static void passwordSearch(String[] arr, boolean[] chk) throws IOException {
+        if(passwordCount >= L){
             if (vowelCount >= 1 && consCount >= 2) {
-//                for (char c = 0; c < sb.toString().length()-1; c++) {
-//                    if (sb.toString().charAt(c) > sb.toString().charAt(c + 1)) {
-//                        return;
-//                    }
-//                }
                 bw.write(sb.toString());
                 bw.newLine();
-                return;
-            } else {
-                return;
             }
-
+            return;
         }
 
         for (int i = 0; i < arr.length; i++) {
@@ -58,7 +43,7 @@ public class BOJ_1759 {
                 continue;
             }else{
                 if (sb.toString().length() >= 1) {
-                    if (sb.toString().charAt(count - 1) > arr[i].charAt(0)) {
+                    if (sb.toString().charAt(passwordCount - 1) > arr[i].charAt(0)) {
                         continue;
                     }
                 }
@@ -69,16 +54,16 @@ public class BOJ_1759 {
             } else {
                 consCount++;
             }
-            count++;
+            passwordCount++;
             chk[i] = true;
-            permutation(arr, chk);
-            sb.deleteCharAt(count - 1);
+            passwordSearch(arr, chk);
+            sb.deleteCharAt(passwordCount - 1);
             if (arr[i].equals("a") || arr[i].equals("e") || arr[i].equals("i") || arr[i].equals("o") || arr[i].equals("u")) {
                 vowelCount--;
             } else {
                 consCount--;
             }
-            count--;
+            passwordCount--;
             chk[i] = false;
         }
     }
