@@ -21,12 +21,16 @@ public class BOJ_1759 {
     public static void main(String[] args) throws IOException {
 
         // 주어진 정보 받기
-        StringTokenizer st = new StringTokenizer(br.readLine());
+       StringTokenizer st = new StringTokenizer(br.readLine());
         L = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
 
+        // 패스워드를 구성하는 문자열
         String[] arr = br.readLine().split(" ");
+        // 패스워드 구성하는 문자열의 현재 사용여부 판단 배열
         boolean[] chk = new boolean[arr.length];
+
+        // 문제에서 주어진 패스워드 구성 문자열 사전순으로 정렬
         Arrays.sort(arr);
         passwordSearch(arr, chk);
 
