@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-// 백준온라인저지 1759번 문제 암호만들기 문제풀이 (BOJ-1759)
+// 백준온라인저지 1759번 암호만들기 문제풀이 (BOJ-1759)
 public class BOJ_1759 {
     // 입출력을 위한 객체
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
