@@ -4,6 +4,7 @@
 ---
    
 1. Algorithm & Data Structure
+   - [[Algorithm] 백준온라인저지 1759번 암호 만들기 Java로 문제풀이!! (BOJ-1759)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_1759.java)
    - [[Algorithm] 백준온라인저지 2357번 최솟값과 최댓값 Java로 문제풀이!! (BOJ-2357)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_2357.java)
    - [[Algorithm] 백준온라인저지 1016번 Java로 문제 풀이! (BOJ-1016)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_1016.java)
    - [[Algorithm] 세그먼트 트리(Segment Tree)를 Java로 구현해보자! !(BOJ-2042 구간 합)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_2042.java)
