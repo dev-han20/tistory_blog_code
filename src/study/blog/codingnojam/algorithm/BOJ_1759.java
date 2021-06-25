@@ -41,7 +41,11 @@ public class BOJ_1759 {
         bw.close();
     }
 
-    // 패스워드 찾기
+    /**
+     * @param arr : 문제에서 주어진 패스워드를 구성하는 문자열 배열
+     * @param chk : 문자의 사용여부를 판단하는 배열
+     * @throws IOException
+     */
     public static void passwordSearch(String[] arr, boolean[] chk) throws IOException {
         // 현재까지 조합 된 패스워드 문자개수가 문제에서 요구하는 개수보다 클 경우
         if(passwordCount >= L){
