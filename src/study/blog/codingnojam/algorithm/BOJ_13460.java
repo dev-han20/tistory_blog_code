@@ -22,11 +22,28 @@ public class BOJ_13460 {
             String[] temp = br.readLine().split("");
             for (int j = 0; j < board[i].length; j++) {
                 board[i][j] = temp[j];
+                if (temp[j].equals("R")) {
+                    Bead redBead = new Bead("R", i, j);
+                } else if (temp[j].equals("B")) {
+                    Bead blueBead = new Bead("B", i, j);
+                }
             }
         }
-        
 
 
+
+    }
+
+    static class Bead {
+        String color;
+        int row;
+        int column;
+
+        public Bead(String color, int row, int column) {
+            this.color = color;
+            this.row = row;
+            this.column = column;
+        }
     }
 
 }
