@@ -18,17 +18,25 @@ public class BOJ_13460 {
 
         String[][] board = new String[N][M];
 
+        Bead redBead = new Bead("R");
+        Bead blueBead = new Bead("B");
+
         for (int i = 0; i < board.length; i++) {
             String[] temp = br.readLine().split("");
             for (int j = 0; j < board[i].length; j++) {
                 board[i][j] = temp[j];
                 if (temp[j].equals("R")) {
-                    Bead redBead = new Bead("R", i, j);
+                    redBead.row = i;
+                    redBead.column = j;
                 } else if (temp[j].equals("B")) {
-                    Bead blueBead = new Bead("B", i, j);
+                    blueBead.row = i;
+                    blueBead.column = j;
                 }
             }
         }
+
+
+        
 
 
 
@@ -39,10 +47,8 @@ public class BOJ_13460 {
         int row;
         int column;
 
-        public Bead(String color, int row, int column) {
+        public Bead(String color) {
             this.color = color;
-            this.row = row;
-            this.column = column;
         }
     }
 
