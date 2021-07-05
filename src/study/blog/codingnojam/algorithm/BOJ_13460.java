@@ -3,6 +3,8 @@ package study.blog.codingnojam.algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 // 백준온라인저지 13460번 구슬탈출2 문제풀이
@@ -35,10 +37,11 @@ public class BOJ_13460 {
             }
         }
 
+        int[] moveR = {-1, 1, 0, 0};
+        int[] moveC = {0 , 0, -1, 1};
 
+        Queue<Bead> bfs = new LinkedList<>();
         
-
-
 
     }
 
