@@ -37,11 +37,30 @@ public class BOJ_13460 {
             }
         }
 
-        int[] moveR = {-1, 1, 0, 0};
-        int[] moveC = {0 , 0, -1, 1};
+        int[] moveRow = {-1, 1, 0, 0};
+        int[] moveColumn = {0, 0, -1, 1};
 
         Queue<Bead> bfs = new LinkedList<>();
-        
+
+        bfs.offer(redBead);
+
+        while (!bfs.isEmpty()) {
+            Bead bead = bfs.poll();
+
+            for (int i = 0; i < 4; i++) {
+                int moveR = bead.row + moveRow[i];
+                int moveC = bead.column + moveColumn[i];
+
+                if (board[moveR][moveC].equals("#")) {
+                    continue;
+                } else {
+                    
+                }
+
+            }
+
+        }
+
 
     }
 
