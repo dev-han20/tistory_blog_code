@@ -51,10 +51,19 @@ public class BOJ_13460 {
                 int moveR = bead.row + moveRow[i];
                 int moveC = bead.column + moveColumn[i];
 
-                if (board[moveR][moveC].equals("#")) {
+                if (board[moveR][moveC].equals("#") || board[moveR][moveC].equals("B")) {
                     continue;
+                } else if (board[moveR][moveC].equals(".")) {
+
+                    while ((board[moveR][moveC].equals("."))) {
+                        moveR = bead.row + moveRow[i];
+                        moveC = bead.column + moveColumn[i];
+                        
+
+                    }
+
                 } else {
-                    
+
                 }
 
             }
