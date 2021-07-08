@@ -40,6 +40,7 @@ public class BOJ_13460 {
         int[] moveRow = {-1, 1, 0, 0};
         int[] moveColumn = {0, 0, -1, 1};
 
+        Board board2 = new Board();
         Queue<Bead> bfs = new LinkedList<>();
 
         bfs.offer(redBead);
@@ -72,6 +73,18 @@ public class BOJ_13460 {
 
 
     }
+
+    static class Board {
+
+        String[][] map;
+        Bead redBead = new Bead("red");
+        Bead blueBead = new Bead("blue");
+
+        public Board(int N, int M) {
+            this.map = new String[N][M];
+        }
+    }
+
 
     static class Bead {
         String color;
