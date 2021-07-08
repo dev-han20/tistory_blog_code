@@ -18,21 +18,18 @@ public class BOJ_13460 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        String[][] board = new String[N][M];
+        Board board = new Board(N, M);
 
-        Bead redBead = new Bead("R");
-        Bead blueBead = new Bead("B");
-
-        for (int i = 0; i < board.length; i++) {
+        for (int i = 0; i < board.map.length; i++) {
             String[] temp = br.readLine().split("");
-            for (int j = 0; j < board[i].length; j++) {
-                board[i][j] = temp[j];
+            for (int j = 0; j < board.map[i].length; j++) {
+                board.map[i][j] = temp[j];
                 if (temp[j].equals("R")) {
-                    redBead.row = i;
-                    redBead.column = j;
+                    board.redBead.row = i;
+                    board.redBead.column = j;
                 } else if (temp[j].equals("B")) {
-                    blueBead.row = i;
-                    blueBead.column = j;
+                    board.blueBead.row = i;
+                    board.blueBead.column = j;
                 }
             }
         }
@@ -40,11 +37,11 @@ public class BOJ_13460 {
         int[] moveRow = {-1, 1, 0, 0};
         int[] moveColumn = {0, 0, -1, 1};
 
-        Board board2 = new Board();
-        Queue<Bead> bfs = new LinkedList<>();
+        Queue<Board> bfs = new LinkedList<>();
+        
+        bfs.offer(board);
 
-        bfs.offer(redBead);
-
+        // 여기부터 시작
         while (!bfs.isEmpty()) {
             Bead bead = bfs.poll();
 
