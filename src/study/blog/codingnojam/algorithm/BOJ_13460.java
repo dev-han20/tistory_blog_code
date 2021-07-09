@@ -25,11 +25,11 @@ public class BOJ_13460 {
             for (int j = 0; j < board.map[i].length; j++) {
                 board.map[i][j] = temp[j];
                 if (temp[j].equals("R")) {
-                    board.redBead.row = i;
-                    board.redBead.column = j;
+                    board.redBeadRow = i;
+                    board.redBeadColumn = j;
                 } else if (temp[j].equals("B")) {
-                    board.blueBead.row = i;
-                    board.blueBead.column = j;
+                    board.blueBeadRow = i;
+                    board.blueBeadColumn = j;
                 }
             }
         }
@@ -43,9 +43,45 @@ public class BOJ_13460 {
 
         // 여기부터 시작
         while (!bfs.isEmpty()) {
-            Bead bead = bfs.poll();
+            Board tempBoard = bfs.poll();
 
             for (int i = 0; i < 4; i++) {
+
+                switch (i) {
+                    case 0 : //상
+                        if (tempBoard.redBeadRow < tempBoard.blueBeadRow) {
+                            int moveR = tempBoard.redBeadRow + moveRow[i];
+                            int moveC = tempBoard.redBeadColumn + moveColumn[i];
+
+                            while (tempBoard.map[moveR][moveC].equals(".")) {
+                                moveR = moveR + moveRow[i];
+                                moveC = moveC + moveColumn[i];
+                            }
+
+                            if (tempBoard.map[moveR][moveC].equals("#")) {
+                                moveR = moveR + moveRow[i];
+                                moveC = moveC + moveColumn[i];
+
+                            } else if (tempBoard.map[moveR][moveC].equals("O")) {
+
+                            }
+
+
+
+
+
+                        }
+
+
+                        break;
+                    case 1 : // 하
+                        break;
+                    case 2 : // 좌
+                        break;
+                    case 3 : // 우
+                        break;
+
+                }
                 int moveR = bead.row + moveRow[i];
                 int moveC = bead.column + moveColumn[i];
 
@@ -74,8 +110,10 @@ public class BOJ_13460 {
     static class Board {
 
         String[][] map;
-        Bead redBead = new Bead("red");
-        Bead blueBead = new Bead("blue");
+        int redBeadRow;
+        int redBeadColumn;
+        int blueBeadRow;
+        int blueBeadColumn;
 
         public Board(int N, int M) {
             this.map = new String[N][M];
@@ -83,14 +121,14 @@ public class BOJ_13460 {
     }
 
 
-    static class Bead {
-        String color;
-        int row;
-        int column;
-
-        public Bead(String color) {
-            this.color = color;
-        }
-    }
+//    static class Bead {
+//        String color;
+//        int row;
+//        int column;
+//
+//        public Bead(String color) {
+//            this.color = color;
+//        }
+//    }
 
 }
