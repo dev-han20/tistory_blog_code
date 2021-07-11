@@ -12,6 +12,7 @@ public class BOJ_13460 {
 
     static int[] moveRow = {-1, 1, 0, 0};
     static int[] moveColumn = {0, 0, -1, 1};
+    static boolean[][][][] visited = new boolean[10][10][10][10];
 
     public static void main(String[] args) throws IOException {
 
@@ -26,115 +27,132 @@ public class BOJ_13460 {
         for (int i = 0; i < board.map.length; i++) {
             String[] temp = br.readLine().split("");
             for (int j = 0; j < board.map[i].length; j++) {
-                board.map[i][j] = temp[j];
                 if (temp[j].equals("R")) {
                     board.redBeadRow = i;
                     board.redBeadColumn = j;
+                    board.map[i][j] = ".";
                 } else if (temp[j].equals("B")) {
                     board.blueBeadRow = i;
                     board.blueBeadColumn = j;
+                    board.map[i][j] = ".";
+                } else {
+                    board.map[i][j] = temp[j];
                 }
             }
         }
 
-
         Queue<Board> bfs = new LinkedList<>();
 
         bfs.offer(board);
+        visited[board.redBeadRow][board.redBeadColumn][board.blueBeadRow][board.blueBeadColumn] = true;
+
+        int result = -1;
 
         // 여기부터 시작
         while (!bfs.isEmpty()) {
             Board pollBoard = bfs.poll();
+
             if (pollBoard.count >= 10) {
-                System.out.println("-1");
+                System.out.println(result);
                 return;
             }
 
             for (int i = 0; i < 4; i++) {
                 Board tempBoard = new Board(N, M);
+
                 tempBoard.redBeadRow = pollBoard.redBeadRow;
                 tempBoard.redBeadColumn = pollBoard.redBeadColumn;
                 tempBoard.blueBeadRow = pollBoard.blueBeadRow;
                 tempBoard.blueBeadColumn = pollBoard.blueBeadColumn;
                 tempBoard.count = pollBoard.count;
-                for (int k = 0; k < N; k++) {
-                    for (int j = 0; j < M; j++) {
-                        tempBoard.map[j][k] = pollBoard.map[j][k];
-                    }
-                }
+                tempBoard.map = pollBoard.map;
+
                 tempBoard.count++;
-                int result = 0;
+                int tempResult = 0;
 
                 switch (i) {
                     case 0: //상
 
                         if (tempBoard.redBeadRow <= tempBoard.blueBeadRow) {
-                            result = firstRedSecondBlue(tempBoard, i);
+                            tempResult = firstRedSecondBlue(tempBoard, i);
                         } else {
-                            result = firstBlueSecondRed(tempBoard, i);
+                            tempResult = firstBlueSecondRed(tempBoard, i);
                         }
 
-                        if (result == 0) {
-                            bfs.offer(tempBoard);
+                        if (tempResult == 0) {
+                            if (!visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]) {
+                                bfs.offer(tempBoard);
+                                visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]= true;
+                            }
                         } else {
-                            System.out.println(result);
-                            return;
+                            result = Math.max(result, tempResult);
                         }
 
                         break;
                     case 1: // 하
 
                         if (tempBoard.redBeadRow >= tempBoard.blueBeadRow) {
-                            result = firstRedSecondBlue(tempBoard, i);
+                            tempResult = firstRedSecondBlue(tempBoard, i);
                         } else {
-                            result = firstBlueSecondRed(tempBoard, i);
+                            tempResult = firstBlueSecondRed(tempBoard, i);
                         }
 
-                        if (result == 0) {
-                            bfs.offer(tempBoard);
+                        if (tempResult == 0) {
+                            if (!visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]) {
+                                bfs.offer(tempBoard);
+                                visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]= true;
+                            }
                         } else {
-                            System.out.println(result);
-                            return;
+                            result = Math.max(result, tempResult);
                         }
 
                         break;
                     case 2: // 좌
 
                         if (tempBoard.redBeadColumn <= tempBoard.blueBeadColumn) {
-                            result = firstRedSecondBlue(tempBoard, i);
+                            tempResult = firstRedSecondBlue(tempBoard, i);
                         } else {
-                            result = firstBlueSecondRed(tempBoard, i);
+                            tempResult = firstBlueSecondRed(tempBoard, i);
                         }
 
-                        if (result == 0) {
-                            bfs.offer(tempBoard);
+                        if (tempResult == 0) {
+                            if (!visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]) {
+                                bfs.offer(tempBoard);
+                                visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]= true;
+                            }
                         } else {
-                            System.out.println(result);
-                            return;
+                            result = Math.max(result, tempResult);
                         }
 
                         break;
                     case 3: // 우
 
                         if (tempBoard.redBeadColumn >= tempBoard.blueBeadColumn) {
-                            result = firstRedSecondBlue(tempBoard, i);
+                            tempResult = firstRedSecondBlue(tempBoard, i);
                         } else {
-                            result = firstBlueSecondRed(tempBoard, i);
+                            tempResult = firstBlueSecondRed(tempBoard, i);
                         }
 
-                        if (result == 0) {
-                            bfs.offer(tempBoard);
+                        if (tempResult == 0) {
+                            if (!visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]) {
+                                bfs.offer(tempBoard);
+                                visited[tempBoard.redBeadRow][tempBoard.redBeadColumn][tempBoard.blueBeadRow][tempBoard.blueBeadColumn]= true;
+                            }
                         } else {
-                            System.out.println(result);
-                            return;
+                            result = Math.max(result, tempResult);
                         }
 
                         break;
                 }
-
             }
 
+            if (result > 0) {
+                System.out.println(result);
+                return;
+            }
         }
+
+        System.out.println(result);
     }
 
     static class Board {
@@ -163,16 +181,13 @@ public class BOJ_13460 {
             moveC = moveC + moveColumn[i];
         }
 
-        if (tempBoard.map[moveR][moveC].equals("#") || tempBoard.map[moveR][moveC].equals("B")) {
+        if (tempBoard.map[moveR][moveC].equals("#")) {
             moveR = moveR - moveRow[i];
             moveC = moveC - moveColumn[i];
-            tempBoard.map[tempBoard.redBeadRow][tempBoard.redBeadColumn] = ".";
-            tempBoard.map[moveR][moveC] = "R";
             tempBoard.redBeadRow = moveR;
             tempBoard.redBeadColumn = moveC;
         } else if (tempBoard.map[moveR][moveC].equals("O")) {
             redEscChk = true;
-            tempBoard.map[tempBoard.redBeadRow][tempBoard.redBeadColumn] = ".";
             result = tempBoard.count;
         }
 
@@ -184,11 +199,13 @@ public class BOJ_13460 {
             moveC = moveC + moveColumn[i];
         }
 
-        if (tempBoard.map[moveR][moveC].equals("#") || tempBoard.map[moveR][moveC].equals("R")) {
+        if (tempBoard.map[moveR][moveC].equals("#")) {
             moveR = moveR - moveRow[i];
             moveC = moveC - moveColumn[i];
-            tempBoard.map[tempBoard.blueBeadRow][tempBoard.blueBeadColumn] = ".";
-            tempBoard.map[moveR][moveC] = "B";
+            if (moveR == tempBoard.redBeadRow && moveC == tempBoard.redBeadColumn) {
+                moveR = moveR - moveRow[i];
+                moveC = moveC - moveColumn[i];
+            }
             tempBoard.blueBeadRow = moveR;
             tempBoard.blueBeadColumn = moveC;
         } else if (tempBoard.map[moveR][moveC].equals("O")) {
@@ -211,11 +228,9 @@ public class BOJ_13460 {
             moveC = moveC + moveColumn[i];
         }
 
-        if (tempBoard.map[moveR][moveC].equals("#") || tempBoard.map[moveR][moveC].equals("R")) {
+        if (tempBoard.map[moveR][moveC].equals("#")) {
             moveR = moveR - moveRow[i];
             moveC = moveC - moveColumn[i];
-            tempBoard.map[tempBoard.blueBeadRow][tempBoard.blueBeadColumn] = ".";
-            tempBoard.map[moveR][moveC] = "B";
             tempBoard.blueBeadRow = moveR;
             tempBoard.blueBeadColumn = moveC;
         } else if (tempBoard.map[moveR][moveC].equals("O")) {
@@ -230,11 +245,13 @@ public class BOJ_13460 {
             moveC = moveC + moveColumn[i];
         }
 
-        if (tempBoard.map[moveR][moveC].equals("#") || tempBoard.map[moveR][moveC].equals("B")) {
+        if (tempBoard.map[moveR][moveC].equals("#")) {
             moveR = moveR - moveRow[i];
             moveC = moveC - moveColumn[i];
-            tempBoard.map[tempBoard.redBeadRow][tempBoard.redBeadColumn] = ".";
-            tempBoard.map[moveR][moveC] = "R";
+            if (moveR == tempBoard.blueBeadRow && moveC == tempBoard.blueBeadColumn) {
+                moveR = moveR - moveRow[i];
+                moveC = moveC - moveColumn[i];
+            }
             tempBoard.redBeadRow = moveR;
             tempBoard.redBeadColumn = moveC;
         } else if (tempBoard.map[moveR][moveC].equals("O")) {
