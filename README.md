@@ -2,7 +2,7 @@
 #### Tistory 블로그 소스코드를 업로드합니다.
 
 ---
-<details>   
+<details open>   
    <summary>Algorithm & Data Structure</summary>
 
    - [[Algorithm] 백준온라인저지 13460번 구슬 탈출2 Java로 문제풀이!! (BOJ-13460)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_13460.java)
@@ -21,7 +21,8 @@
    - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_스택](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/Study_DFS_stack.java)
    - [[Algorithm] BOJ-14502 Java로 문제풀이 (완전탐색)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_14502.java)
 </details>
-<details>   
+
+<details open>   
    <summary>Java</summary>
 
    - [[Java] Map Interface의 유용한 메서드를 알아보자! (Java 8 기준)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/java/StudyhMapMethod.java)
