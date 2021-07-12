@@ -8,6 +8,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 // 백준온라인저지 13460번 구슬탈출2 문제풀이
+// https://codingnojam.tistory.com/53
 public class BOJ_13460 {
 
     // 상하좌우 구슬이 이동할 수 있도록 좌표계산에 사용할 배열
