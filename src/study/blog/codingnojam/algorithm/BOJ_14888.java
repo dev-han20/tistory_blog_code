@@ -103,8 +103,5 @@ public class BOJ_14888 {
             // 해당 인덱스 연산자 사용안함으로 체크
             chk[i] = false;
         }
-
     }
-
-
 }
