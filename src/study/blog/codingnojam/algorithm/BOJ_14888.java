@@ -60,6 +60,7 @@ public class BOJ_14888 {
             // 연산자를 순서대로 숫자 사이에 배치해서 계산한 결과 값을 저장할 변수
             // 숫자 배열의 길이가 1더 크므로 초기에 첫번째 숫자값 변수에 저장
             int result = Integer.parseInt(arr[0]);
+            
             // 연산이 끝날때까지 반복
             for (int i = 0; i < tempList.size() ; i++) {
                 if (tempList.get(i) == 0) { // 더하기 연산
