@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+@Re
 public class BOJ_13458 {
 
     // 백준온라인저지 13458번 시험감독 문제 풀이
@@ -24,7 +25,7 @@ public class BOJ_13458 {
 
         // 필요한 감독관의 수를 저장할 결과 값 변수
         long count = 0;
-1
+
         // 시험장의 수만큼 반복문 실행
         for (int i = 0; i < arr.length; i++) {
             // 시험장의 응시자 수
