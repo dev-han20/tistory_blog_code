@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-@Re
 public class BOJ_13458 {
 
     // 백준온라인저지 13458번 시험감독 문제 풀이
