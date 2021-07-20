@@ -1,8 +1,6 @@
 package study.blog.codingnojam.algorithm;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class BOJ_14499 {
 
@@ -10,7 +8,7 @@ public class BOJ_14499 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String[] info = br.readLine().split(" ");
 
         int N = Integer.parseInt(info[0]);
@@ -31,9 +29,83 @@ public class BOJ_14499 {
             }
         }
 
-        
+        String[] command = br.readLine().split(" ");
 
+        int[] moveRow = {0, 0, -1, 1};
+        int[] moveColumn = {1, -1, 0, 0};
 
+        for (int i = 0; i < K; i++) {
+            int direct = Integer.parseInt(command[i]);
+            int mr = dice.row + moveRow[direct-1];
+            int mc = dice.column + moveColumn[direct-1];
+
+            if (mr < 0 || mr >= N || mc < 0 || mc >= M) {
+                continue;
+            } else {
+                dice.row = mr;
+                dice.column = mc;
+                int temp = 0;
+                switch (direct) {
+                    case 1 :    // 동
+                        temp = dice.top;
+                        dice.top = dice.left;
+                        dice.left = dice.bottom;
+                        dice.bottom = dice.right;
+                        dice.right = temp;
+                        if (map[mr][mc] == 0) {
+                            map[mr][mc] = dice.bottom;
+                        } else {
+                            dice.bottom = map[mr][mc];
+                            map[mr][mc] = 0;
+                        }
+                        break;
+                    case 2 : // 서
+                        temp = dice.top;
+                        dice.top = dice.right;
+                        dice.right = dice.bottom;
+                        dice.bottom = dice.left;
+                        dice.left = temp;
+                        if (map[mr][mc] == 0) {
+                            map[mr][mc] = dice.bottom;
+                        } else {
+                            dice.bottom = map[mr][mc];
+                            map[mr][mc] = 0;
+                        }
+                        break;
+                    case 3 :
+                        temp = dice.top;
+                        dice.top = dice.back;
+                        dice.back = dice.bottom;
+                        dice.bottom = dice.front;
+                        dice.front = temp;
+                        if (map[mr][mc] == 0) {
+                            map[mr][mc] = dice.bottom;
+                        } else {
+                            dice.bottom = map[mr][mc];
+                            map[mr][mc] = 0;
+                        }
+                        break;
+                    case 4 :
+                        temp = dice.top;
+                        dice.top = dice.front;
+                        dice.front = dice.bottom;
+                        dice.bottom = dice.back;
+                        dice.back = temp;
+                        if (map[mr][mc] == 0) {
+                            map[mr][mc] = dice.bottom;
+                        } else {
+                            dice.bottom = map[mr][mc];
+                            map[mr][mc] = 0;
+                        }
+                        break;
+                }
+                bw.write(String.valueOf(dice.top));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
     }
 
     static class Dice {
