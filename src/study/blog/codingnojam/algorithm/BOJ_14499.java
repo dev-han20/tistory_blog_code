@@ -116,6 +116,7 @@ public class BOJ_14499 {
                 }
                 // 주사위의 이동이 종료되면 윗면의 값을 출력
                 bw.write(String.valueOf(dice.top));
+                // 주어진 출력대로 하기위해 줄바꿈 추가
                 bw.newLine();
             }
         }
