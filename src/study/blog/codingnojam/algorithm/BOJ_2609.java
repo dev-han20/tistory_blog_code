@@ -6,7 +6,6 @@ public class BOJ_2609 {
 
     // 백준온라인저지 2609번 최대공약수와 최소공배수 Java로 문제풀이
     public static void main(String[] args) {
-
         // 주어진 입력정보 받기
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
