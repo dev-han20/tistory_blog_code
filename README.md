@@ -5,7 +5,6 @@
 <details open>   
    <summary>Algorithm & Data Structure</summary>
 
-  
    - [[Algorithm] 백준온라인저지 10430번(BOJ-10430) 나머지 Java로 문제 풀이 (수학)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_10430.java)
    - [[Algorithm] 백준온라인저지 14499번(BOJ-14499) 주사위 굴리기 Java로 문제풀이(구현)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_14499.java)
    - [[Algorithm] 백준온라인저지 13458번(BOJ-13458) 시험 감독 Java로 문제풀이!!](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_13458.java)
