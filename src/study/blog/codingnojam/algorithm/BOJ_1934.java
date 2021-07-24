@@ -31,6 +31,7 @@ public class BOJ_1934 {
             bw.write(String.valueOf(lcm));
             bw.newLine();
         }
+        // 출력
         bw.flush();
     }
 
