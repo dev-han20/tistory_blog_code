@@ -5,6 +5,7 @@
 <details open>   
    <summary>Algorithm & Data Structure</summary>
 
+   - [[Algorithm] 백준온라인저지 6588번(BOJ 6588) 골드바흐의 추측 Java 풀이!! (에라토스테네스의 체)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_6588.java)
    - [[Algorithm] 백준온라인저지 14501번(BOJ 14501) 퇴사 Java풀이!! (DP)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_14501.java)
    - [[Algorithm] 백준온라인저지 1978번(BOJ-1978) 소수 찾기 Java로 문제 풀이!! (수학)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_1978.java)
    - [[Algorithm] 백준온라인저지 9613번(BOJ-9613) GCD합 Java로 문제풀이!! (수학)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_9613.java)
