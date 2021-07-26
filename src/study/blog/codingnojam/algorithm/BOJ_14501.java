@@ -46,7 +46,7 @@ public class BOJ_14501 {
         for (int i = 1; i < dp.length; i++) {
             if (info[i][0] > i) {
                 // 해당 일자에 주어진 상담업무를 할 수 없는 경우에는 제외하고
-                // 그 전의 근무가능한 일자의 최대비용값을 가져옴
+                // 그 전의 근무가능한 일수에서의 최대비용값을 가져옴
                 dp[i] = dp[i - 1];
             } else {
                 // 해당 일자에 주어진 상담업무를 할 수 있는 경우
@@ -58,9 +58,8 @@ public class BOJ_14501 {
             }
         }
 
+        // 출력
         System.out.println(dp[N]);
-
-
     }
 
 }
