@@ -24,6 +24,7 @@
   
 
 - 문제풀이
+   - [[Algorithm] 백준 2252번(BOJ 2252) 줄 세우기 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_2252.java)
    - [[Algorithm] 백준 15683번(BOJ 15683) 감시 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_15683.java)
    - [[Algorithm] 백준 14891번(BOJ 14891) 톱니바퀴 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_14891.java)
    - [[Algorithm] 백준온라인저지 6588번(BOJ 6588) 골드바흐의 추측 Java 풀이!! (에라토스테네스의 체)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_6588.java)
