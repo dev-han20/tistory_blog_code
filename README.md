@@ -24,6 +24,7 @@
   
 
 - 문제풀이
+   - [[Algorithm] 백준 1005번(BOJ 1005) ACM Craft 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_1005.java)
    - [[Algorithm] 백준 2252번(BOJ 2252) 줄 세우기 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_2252.java)
    - [[Algorithm] 백준 15683번(BOJ 15683) 감시 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_15683.java)
    - [[Algorithm] 백준 14891번(BOJ 14891) 톱니바퀴 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/BOJ_14891.java)
