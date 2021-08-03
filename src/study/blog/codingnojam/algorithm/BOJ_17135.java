@@ -42,7 +42,7 @@ public class BOJ_17135 {
 
         for (int i = r; i <map.length ; i++) {
             for (int j = c; j < map[i].length; j++) {
-                
+
 
             }
         }
