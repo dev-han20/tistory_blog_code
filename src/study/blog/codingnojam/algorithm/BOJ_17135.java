@@ -37,11 +37,17 @@ public class BOJ_17135 {
 
     }
 
-    static void search(int r, int c, int[][] map) {
+    static void search(int r, int c, int[][] map, int[] d) {
 
 
         for (int i = r; i <map.length ; i++) {
             for (int j = c; j < map[i].length; j++) {
+
+                if (map[i][j] == 0) {
+                    map[i][j] = -1;
+                    search(r, c, map, d);
+                    map[i][j] = 0;
+                }
 
 
             }
