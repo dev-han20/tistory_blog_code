@@ -26,7 +26,7 @@ public class BOJ_17135 {
         // 입력을 받기위한 객체
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        // 행, 열, 궁수 공격거리 받고 변수 초기화
+        // 행, 열, 궁수 공격거리 값 받아서 변수 초기화
         String[] info = br.readLine().split(" ");
         N = Integer.parseInt(info[0]);
         M = Integer.parseInt(info[1]);
@@ -40,7 +40,6 @@ public class BOJ_17135 {
                 map[i][j] = Integer.parseInt(temp[j]);
             }
         }
-
         // 제거할 수 있는 적의 최대수 찾기
         search(0);
 
