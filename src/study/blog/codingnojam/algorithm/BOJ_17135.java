@@ -8,20 +8,21 @@ import java.util.List;
 
 // 백준온라인저지 17135번 캐슬디펜스 문제 Java풀이
 public class BOJ_17135 {
-
-    static int N;       // 행의 길이
-    static int M;       // 열의 길이
+    static int N;       // 맵의 전체 행
+    static int M;       // 맵의 전체 열
     static int D;       // 궁수 공격가능거리
     static int[][] map; // 격자판
+
     // 배치 할 궁수 3명
     static List<Archer> archers = new ArrayList<>();
+
     // 경우의 수 별로 저장할 결과 값
     static int count = 0;
+
     // 최종 결과 값
     static int result = 0;
 
     public static void main(String[] args) throws IOException {
-
         // 입력을 받기위한 객체
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -30,10 +31,9 @@ public class BOJ_17135 {
         N = Integer.parseInt(info[0]);
         M = Integer.parseInt(info[1]);
         D = Integer.parseInt(info[2]);
-        // 격자판 생성
-       map = new int[N][M];
 
-       // 격자판 초기화
+        // 격자판 생성 및 초기화
+        map = new int[N][M];
         for (int i = 0; i < N; i++) {
             String[] temp = br.readLine().split(" ");
             for (int j = 0; j < M; j++) {
@@ -46,7 +46,6 @@ public class BOJ_17135 {
 
         // 결과 값 출력
         System.out.println(result);
-
     }
 
     /**
@@ -170,8 +169,6 @@ public class BOJ_17135 {
             // 해당 위치의 궁수 제거
             archers.remove(archers.size()-1);
         }
-
-
     }
 
     // 궁수 클래스
