@@ -19,7 +19,7 @@
   - [[Algorithm] 다익스트라(Dijkstra) 알고리즘을 Java로 구현해보자! (BOJ-1753 최단경로)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/theory/Study_Dijkstra.java)
   - [[Algorithm] Trie를 Java로 구현해보자!](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/theory/Study_Trie.java)
   - [[Algorithm] BFS(Breadth-first search)를 Java로 구현해보자!](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/theory/StudyBFS.java)
-  - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_재귀](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/theory/Study_DFS_Recursion.java)
+  - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_재귀](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/theory/Study_DFS_recursion.java)
   - [[Algorithm] DFS (Depth-first Search)를 Java로 구현해보자!_스택](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/theory/Study_DFS_stack.java) 
   
 
