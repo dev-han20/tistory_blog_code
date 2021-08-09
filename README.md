@@ -25,6 +25,7 @@
 
 - 문제풀이
 
+   - [[Algorithm] 백준 9095번 (BOJ 9095) 1,2,3 더하기 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_9095.java)
    - [[Algorithm] 백준 17135번 (BOJ 17135) 캐슬 디펜스 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_17135.java) 
    - [[Algorithm] 백준 15686번(BOJ 15686) 치킨 배달 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_15686.java)
    - [[Algorithm] 백준 1005번(BOJ 1005) ACM Craft 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_1005.java)
