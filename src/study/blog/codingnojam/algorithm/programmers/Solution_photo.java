@@ -1,4 +1,4 @@
-package study.blog.codingnojam.programmers;
+package study.blog.codingnojam.algorithm.programmers;
 
 // 2021 카카오 코드 본선 - 사진찍기
 class Solution_photo {
