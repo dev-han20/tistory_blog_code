@@ -1,20 +1,11 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-// 2017 팁스타운 - 예상 대진표
-class Solution
-{
-    public int solution(int n, int a, int b)
-    {
-        int answer = 0;
-        a = a + n-1;
-        b = b + n-1;
+import java.util.ArrayList;
+import java.util.List;
 
-        while (a != b) {
-            a = a / 2;
-            b = b / 2;
-            answer++;
-        }
+class Solution {
+    public int[][] solution(int servers, boolean sticky, int[] requests) {
+        int[][] answer = {};
         return answer;
-
     }
 }
