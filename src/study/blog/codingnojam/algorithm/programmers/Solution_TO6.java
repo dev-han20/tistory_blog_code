@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_666 {
+class Solution_TO6 {
 
     long limit = 0;
     long count = 0;

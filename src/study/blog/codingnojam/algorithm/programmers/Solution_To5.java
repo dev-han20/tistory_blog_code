@@ -2,7 +2,7 @@ package study.blog.codingnojam.algorithm.programmers;
 
 import java.util.*;
 
-class Solution_555 {
+class Solution_To5 {
     public int[] solution(int[] fruitWeights, int k) {
 
         int[] range = new int[2];

@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_C3 {
+class Solution_KA3 {
 
     int result = 0;
 

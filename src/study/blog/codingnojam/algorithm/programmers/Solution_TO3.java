@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_333 {
+class Solution_TO3 {
 
     public boolean solution(String amountText) {
         boolean answer = true;

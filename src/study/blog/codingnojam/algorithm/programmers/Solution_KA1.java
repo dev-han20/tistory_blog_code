@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_C1 {
+class Solution_KA1 {
 
     public int solution(String[] deposits) {
         int answer = 0;

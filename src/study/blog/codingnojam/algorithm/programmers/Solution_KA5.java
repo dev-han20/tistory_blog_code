@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_C5 {
+class Solution_KA5 {
     public int[] solution(int[] prices) {
 
         int[] result = new int[prices.length];

@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_C2 {
+class Solution_KA2 {
 
     int result = 0;
     public  int solution(int[][] needs, int r) {

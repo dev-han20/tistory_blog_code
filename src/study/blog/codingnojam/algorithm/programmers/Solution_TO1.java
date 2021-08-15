@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution_111 {
+class Solution_TO1 {
 
     public static void main(String[] args) {
         System.out.println(Math.ceil(12.9));
