@@ -1,9 +1,10 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 // 찾아라 프로그래밍 마에스터 -  게임 맵 최단거리
-class Solution {
+class Solution_게임맵최단거리 {
     public int solution(int[][] maps) {
         int answer = 0;
 
