@@ -1,12 +1,10 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution {
+class Solution_C3 {
 
     int result = 0;
 
     public int solution(int n, int[] price) {
-        int answer = -1;
-
         int stoneCount = 0;
         int money = 0;
 
@@ -19,10 +17,9 @@ class Solution {
             }
         }
 
-
         recursion(n, price, index+1, money, stoneCount);
 
-        return answer;
+        return result;
     }
 
     public void recursion(int limit, int[] price, int index, int money, int stoneCount) {
@@ -47,16 +44,13 @@ class Solution {
                 } else {
                     recursion(limit, price, index + 1, money, stoneCount);
                 }
-
-                } else {
-                    if (price[index] != 0 & stoneCount > 0) {
-                        for (int j = stoneCount; j >= 0; j--) {
-                            money = money + price[index];
-                            stoneCount --;
-                            recursion(limit, price, index + 1, money, stoneCount);
-                        }
-                    }
+            } else {
+                if (price[index] != 0 & stoneCount > 0) {
+                    money = money + (price[index] * stoneCount);
+                        stoneCount =0;
+                        recursion(limit, price, index + 1, money, stoneCount);
                 }
+            }
 
 
         }
