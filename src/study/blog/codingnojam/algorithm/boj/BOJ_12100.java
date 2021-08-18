@@ -33,8 +33,10 @@ public class BOJ_12100 {
         for (int i = 0; i < 4; i++) {
             if (i == 0) { //상
                 for (int j = 0; j < board.length; j++) {
-                    for (int k = 0; k < board.length; k++) {
-                        
+                    for (int k = 0; k < board[j].length; k++) {
+                        while (j >= 0) {
+
+                        }
                     }
                 }
                 
