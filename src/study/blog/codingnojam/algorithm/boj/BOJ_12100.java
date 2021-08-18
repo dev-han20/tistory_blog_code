@@ -20,11 +20,12 @@ public class BOJ_12100 {
             }
         }
 
+        recursion(0, 5);
 
 
     }
 
-    static void recursion(int index) {
+    static void recursion(int index, int limit) {
 
     }
 
