@@ -1,8 +1,6 @@
 package study.blog.codingnojam.algorithm.boj;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.PriorityQueue;
 
 // 백준온라인저지 12100 2048(easy) 문제 풀이 Java
 public class BOJ_12100 {
@@ -13,6 +11,7 @@ public class BOJ_12100 {
 
         int n = Integer.parseInt(br.readLine());
         int[][] map = new int[n][n];
+        boolean[][] sumChk = new boolean[n][n];
 
         for (int i = 0; i < n; i++) {
             String[] info = br.readLine().split(" ");
