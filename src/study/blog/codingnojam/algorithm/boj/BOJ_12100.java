@@ -21,6 +21,7 @@ public class BOJ_12100 {
         // 보드 내에서 숫자가 합쳐졌는지 여부를 판단할 배열
         boolean[][] sumChk = new boolean[n][n];
 
+        // 보드판 정보 받아서 초기화
         for (int i = 0; i < n; i++) {
             String[] info = br.readLine().split(" ");
             for (int j = 0; j < n; j++) {
@@ -28,13 +29,21 @@ public class BOJ_12100 {
             }
         }
 
+        // 5번 이하로 움직이는 모든 경우를 판달할 재귀 메서드
         recursion(0, 5, board);
 
 
     }
 
+    /**
+     * 이동하는 모든 경우의 수를 체크할 재귀메서드
+     * @param index : 재귀메서드 진행 횟수
+     * @param limit : 보드가 움직여야하는 횟수
+     * @param board : 보드판
+     */
     static void recursion(int index, int limit, int[][] board) {
 
+        // 반복문으로 상하좌우 이동
         for (int i = 0; i < 4; i++) {
             if (i == 0) { //상
                 for (int j = 0; j < board.length; j++) {
