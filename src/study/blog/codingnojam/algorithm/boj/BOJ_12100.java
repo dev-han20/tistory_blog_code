@@ -5,15 +5,20 @@ import java.io.*;
 // 백준온라인저지 12100 2048(easy) 문제 풀이 Java
 public class BOJ_12100 {
 
+    // 상하좌우 이동을 반복문으로 구현하기 위해 사용할 배열
     static int[] moveR = {-1, 1, 0, 0};
     static int[] moveC = {0, 0, -1, 1};
 
     public static void main(String[] args) throws IOException {
 
+        // 입력을 받을 객체
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        // 보드 크기
         int n = Integer.parseInt(br.readLine());
+        // 보드
         int[][] board = new int[n][n];
+        // 보드 내에서 숫자가 합쳐졌는지 여부를 판단할 배열
         boolean[][] sumChk = new boolean[n][n];
 
         for (int i = 0; i < n; i++) {
