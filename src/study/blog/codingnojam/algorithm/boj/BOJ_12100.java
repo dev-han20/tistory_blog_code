@@ -56,10 +56,31 @@ public class BOJ_12100 {
                 
 
             } else if (i == 1) {
+                for (int j = 0; j < board.length; j++) {
+                    for (int k = 0; k < board[j].length; k++) {
+                        while (j >= 0) {
+
+                        }
+                    }
+                }
 
             } else if (i == 2) {
+                for (int j = 0; j < board.length; j++) {
+                    for (int k = 0; k < board[j].length; k++) {
+                        while (j >= 0) {
+
+                        }
+                    }
+                }
 
             } else {
+                for (int j = 0; j < board.length; j++) {
+                    for (int k = 0; k < board[j].length; k++) {
+                        while (j >= 0) {
+
+                        }
+                    }
+                }
                 
             }
             
