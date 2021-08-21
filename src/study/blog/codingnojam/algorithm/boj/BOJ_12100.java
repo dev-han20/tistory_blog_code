@@ -8,6 +8,7 @@ public class BOJ_12100 {
     // 상하좌우 이동을 반복문으로 구현하기 위해 사용할 배열
     static int[] moveR = {-1, 1, 0, 0};
     static int[] moveC = {0, 0, -1, 1};
+    static int result = 0;
 
     public static void main(String[] args) throws IOException {
 
@@ -18,8 +19,7 @@ public class BOJ_12100 {
         int n = Integer.parseInt(br.readLine());
         // 보드
         int[][] board = new int[n][n];
-        // 보드 내에서 숫자가 합쳐졌는지 여부를 판단할 배열
-        boolean[][] sumChk = new boolean[n][n];
+
 
         // 보드판 정보 받아서 초기화
         for (int i = 0; i < n; i++) {
@@ -32,6 +32,8 @@ public class BOJ_12100 {
         // 5번 이하로 움직이는 모든 경우를 판달할 재귀 메서드
         recursion(0, 5, board);
 
+        System.out.println(result);
+
 
     }
 
@@ -43,47 +45,55 @@ public class BOJ_12100 {
      */
     static void recursion(int index, int limit, int[][] board) {
 
+        if (index == limit) {
+            int tempReulst = 0;
+            for (int i = 0; i < board.length; i++) {
+                for (int j = 0; j < board.length; j++) {
+                    Math.max(tempReulst, board[i][j]);
+                }
+            }
+            Math.max(result, tempReulst);
+            return;
+        }
+
+        // 보드 내에서 숫자가 합쳐졌는지 여부를 판단할 배열
+        boolean[][] sumChk = new boolean[board.length][board.length];
+
         // 반복문으로 상하좌우 이동
         for (int i = 0; i < 4; i++) {
-            if (i == 0) { //상
                 for (int j = 0; j < board.length; j++) {
                     for (int k = 0; k < board[j].length; k++) {
-                        while (j >= 0) {
-
+                        int nowRow = j;
+                        int nowCol = k;
+                        int moveRow = nowRow + moveR[i];
+                        int moveCol = nowCol + moveC[i];
+                        if (moveRow >= board.length || moveRow < 0 || moveCol >= board.length || moveCol < 0) {
+                            continue;
+                        }
+                        boolean end = false;
+                        while (!end) {
+                            if (board[moveRow][moveCol] == 0) {
+                                board[moveRow][moveCol] = board[nowRow][nowCol];
+                                board[nowRow][nowCol] = 0;
+                                nowRow = moveRow;
+                                nowCol = moveCol;
+                                moveRow = nowRow + moveR[i];
+                                moveCol = nowCol + moveC[i];
+                                if (moveRow >= board.length || moveRow < 0 || moveCol >= board.length || moveCol < 0) {
+                                    end = true;
+                                }
+                            } else if (board[moveRow][moveCol] == board[nowRow][nowCol]) {
+                                if (!sumChk[moveRow][moveCol]) {
+                                    board[moveRow][moveCol] = board[moveRow][moveCol] * 2;
+                                    board[nowRow][nowCol] = 0;
+                                    sumChk[moveRow][moveCol] = true;
+                                }
+                                end = true;
+                            }
                         }
                     }
                 }
-                
-
-            } else if (i == 1) {
-                for (int j = 0; j < board.length; j++) {
-                    for (int k = 0; k < board[j].length; k++) {
-                        while (j >= 0) {
-
-                        }
-                    }
-                }
-
-            } else if (i == 2) {
-                for (int j = 0; j < board.length; j++) {
-                    for (int k = 0; k < board[j].length; k++) {
-                        while (j >= 0) {
-
-                        }
-                    }
-                }
-
-            } else {
-                for (int j = 0; j < board.length; j++) {
-                    for (int k = 0; k < board[j].length; k++) {
-                        while (j >= 0) {
-
-                        }
-                    }
-                }
-                
-            }
-            
+                recursion(index +1, limit, board);
         }
 
     }
