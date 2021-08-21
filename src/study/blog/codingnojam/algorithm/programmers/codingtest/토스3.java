@@ -1,6 +1,6 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
-class Solution_TO3 {
+class 토스3 {
 
     public boolean solution(String amountText) {
         boolean answer = true;

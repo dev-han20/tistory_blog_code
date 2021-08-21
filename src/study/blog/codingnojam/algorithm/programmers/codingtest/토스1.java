@@ -1,6 +1,6 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
-class Solution_TO1 {
+class 토스1 {
 
     public static void main(String[] args) {
         System.out.println(Math.ceil(12.9));

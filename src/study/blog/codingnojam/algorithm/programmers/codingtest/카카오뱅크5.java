@@ -1,6 +1,6 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
-class Solution_KA5 {
+class 카카오뱅크5 {
     public int[] solution(int[] prices) {
 
         int[] result = new int[prices.length];

@@ -1,6 +1,6 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
-class Solution_TO6 {
+class 토스6 {
 
     long limit = 0;
     long count = 0;

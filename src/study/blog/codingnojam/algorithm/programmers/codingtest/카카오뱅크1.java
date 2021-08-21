@@ -1,6 +1,6 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
-class Solution_KA1 {
+class 카카오뱅크1 {
 
     public int solution(String[] deposits) {
         int answer = 0;

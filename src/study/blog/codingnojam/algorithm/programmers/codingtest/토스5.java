@@ -1,8 +1,8 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
 import java.util.*;
 
-class Solution_TO5 {
+class 토스5 {
     public int[] solution(int[] fruitWeights, int k) {
 
         int[] range = new int[2];

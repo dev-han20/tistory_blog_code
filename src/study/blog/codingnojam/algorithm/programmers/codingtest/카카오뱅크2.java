@@ -1,6 +1,6 @@
-package study.blog.codingnojam.algorithm.programmers;
+package study.blog.codingnojam.algorithm.programmers.codingtest;
 
-class Solution_KA2 {
+class 카카오뱅크2 {
 
     int result = 0;
     public  int solution(int[][] needs, int r) {
