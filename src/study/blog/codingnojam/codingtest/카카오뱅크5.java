@@ -1,4 +1,4 @@
-package study.blog.codingnojam.algorithm.programmers.codingtest;
+package study.blog.codingnojam.codingtest;
 
 class 카카오뱅크5 {
     public int[] solution(int[] prices) {

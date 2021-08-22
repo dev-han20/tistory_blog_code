@@ -1,4 +1,4 @@
-package study.blog.codingnojam.algorithm.programmers.codingtest;
+package study.blog.codingnojam.codingtest;
 
 import java.util.*;
 
