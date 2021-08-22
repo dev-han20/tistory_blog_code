@@ -1,54 +1,46 @@
 package study.blog.codingnojam.algorithm.programmers;
 
+import java.util.HashMap;
+
 class Solution {
-    public static void main(String[] args) {
-        int[] aa = {1, 3, 5, 7, 6, 8, 9, 5, 1};
-        solution(aa);
-        System.out.println();
-    }
-    public static int solution(int[] arr) {
-        int answer = 0;
-        int startIndex = 0;
-        int min = Integer.MAX_VALUE;
+    public boolean[] solution(String[] infos, String[] actions) {
 
-        boolean endChk = false;
-        while (!endChk) {
+        boolean[] answer = new boolean[actions.length];
+        String loginChk = "NO";
+        boolean basketChk = false;
+        HashMap<String, String> users = new HashMap<>();
 
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] > 0) {
-                    min = Math.min(min, arr[i]);
+        for (int i = 0; i < infos.length; i++) {
+            String[] temp = infos[i].split(" ");
+            users.put(temp[0], temp[1]);
+        }
+
+        for (int i = 0; i < actions.length; i++) {
+            String[] temp = actions[i].split(" ");
+            if (temp[0].equals("ADD")) {
+                if (loginChk.equals("NO")) {
+                    answer[i] = false;
                 } else {
-                    if (i - 1 < 0 || min == Integer.MAX_VALUE) {
-                        startIndex = i + 1;
-                        continue;
+                    answer[i] = true;
+                    basketChk = true;
+                }
+            } else if (temp[0].equals("LOGIN")) {
+                if (loginChk.equals("NO")) {
+                    if (users.get(temp[1]).equals(temp[2])) {
+                        answer[i] = true;
+                        loginChk = "YES";
                     } else {
-                        for (int j = startIndex; j < i; j++) {
-                            arr[j] = arr[j] - min;
-                        }
-                        answer++;
-                        startIndex = i + 1;
-                        min = Integer.MAX_VALUE;
-                        continue;
+                        answer[i] = false;
                     }
-                }
-
-                if (i == arr.length - 1) {
-                    for (int j = startIndex; j < arr.length; j++) {
-                        arr[j] = arr[j] - min;
-                    }
-                    answer++;
-                    startIndex = 0;
-                    min = Integer.MAX_VALUE;
-                }
-            }
-
-
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] > 0) {
-                    endChk = false;
-                    break;
                 } else {
-                    endChk = true;
+                    answer[i] = false;
+                }
+            } else {
+                if (basketChk) {
+                    answer[i] = true;
+                    basketChk = false;
+                } else {
+                    answer[i] = false;
                 }
             }
         }
