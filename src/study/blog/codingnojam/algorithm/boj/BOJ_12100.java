@@ -8,6 +8,8 @@ public class BOJ_12100 {
     // 상하좌우 이동을 반복문으로 구현하기 위해 사용할 배열
     static int[] moveR = {-1, 1, 0, 0};
     static int[] moveC = {0, 0, -1, 1};
+
+    // 결과를 저장할 변수
     static int result = 0;
 
     public static void main(String[] args) throws IOException {
