@@ -108,6 +108,7 @@ public class BOJ_3190 {
                         // 뱀의 머리가 바라보는 방향 반시계방향으로 90도 회전
                         head.direction = head.direction - 1 == -1 ? 3 : head.direction - 1;
                     }
+
                     // 머리가 회전한 위치를 추후에 꼬리가 따라와서 그 해당 위치에서 방향전환을 해야하므로
                     // 해당 위치를 꼬리가 탐색할 방향전환 List에 추가
                     tailDirections.add(new Location(head.row, head.column, head.direction));
