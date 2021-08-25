@@ -25,6 +25,7 @@
 
 - 문제풀이
 
+      - [[Algorithm] 백준 3190번(BOJ 3190) 뱀 문제풀이!! (java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_3190.java)
    - [[Algorithm] 백준 12100번(BOJ 12100) 2048(easy) 문제 풀이(Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_12100.java)
    - [[Algorithm] 백준 4673(BOJ 4673) 셀프 넘버 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_4673.java)
    - [[Algorithm] 백준 9012(BOJ 9012) 괄호 문제풀이 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_9012.java)
