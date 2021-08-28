@@ -1,52 +1,44 @@
-package study.blog.codingnojam.algorithm.codility;// you can also use imports, for example:
-// import java.util.*;
+package study.blog.codingnojam.algorithm.codility;
 
-// you can write to stdout for debugging purposes, e.g.
-// System.out.println("this is a debug message");
+import java.util.Stack;
 
 class Solution {
-
-    public static void main(String[] args) {
-        int[] a = {1, 3, 2, 1, 2, 1, 5, 3, 3, 4, 2};
-        System.out.println(solution(a));
-
-    }
-
-    public static int solution(int[] A) {
-        int result = 0;
-
-        if (A.length <= 2) {
-            return result;
+    public int solution(String S) {
+        int result = -1;
+        if (S.length() == 0) {
+            return 1;
         }
 
-        int startIndex = -1;
-        int index = 0;
-        while (true) {
-            if (startIndex == -1) {
-                if (index >= A.length - 2) {
-                    break;
-                }
-                if (A[index] > A[index + 1]) {
-                    startIndex = index;
-                    index++;
-                }
-                index++;
-            } else {
-                if (index >= A.length) {
-                    break;
-                }
-                if (A[index] >= A[startIndex]) {
-                    for (int i = index; i > startIndex ; i--) {
-                        result = Math.max(result, A[startIndex] - A[i]);
-                    }
-                    startIndex = -1;
+        Stack<Character> st = new Stack<>();
 
+        for (int i = 0; i < S.length(); i++) {
+            if (st.isEmpty()) {
+                st.push(S.charAt(i));
+            } else {
+                char c = st.peek();
+                if (c == '(') {
+                    c = ')';
+                }else if (c == '{') {
+                    c = '}';
+                } else if (c == '[') {
+                    c = ']';
+                }else{
+                    result = 0;
+                    break;
+                }
+
+                if (c == S.charAt(i)) {
+                    st.pop();
                 } else {
-                    index++;
+                    st.push(S.charAt(i));
                 }
             }
         }
 
+
+        result = st.isEmpty() ? 1 : 0;
+
         return result;
+
     }
 }
