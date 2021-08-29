@@ -44,7 +44,6 @@ class Codility_flooddepth {
                 } else {
                     if (A[index] > A[index - 1]) {
                         for (int i = index-1; i > startIndex ; i--) {
-                            if()
                             result = Math.max(result, A[index] - A[i]);
                         }
                     }
