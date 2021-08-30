@@ -12,8 +12,8 @@ class Solution {
         int[] ee = {8,8,4,3};
         int k = 2;
         System.out.println(solution(ee, k));
-
     }
+
     public static int solution(int[] A, int K) {
 
         int result = Integer.MAX_VALUE;
@@ -30,14 +30,13 @@ class Solution {
                 temp[j - i] = tempA[j];
                 tempA[j] = -1;
             }
+
             Arrays.sort(tempA);
             int minValue = tempA[K];
             int maxValue = tempA[A.length - 1];
             int sub = maxValue - minValue;
             result = Math.min(result, sub);
-
         }
-
 
         return result;
     }
