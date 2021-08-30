@@ -1,20 +1,9 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 class Solution_직업군_추천하기 {
 
-
-    public static void main(String[] args) {
-        String s = "dfdf df qwqwe";
-        String q = s.substring(0, s.indexOf(" "));
-        System.out.println(q);
-        Solution_직업군_추천하기 test = new Solution_직업군_추천하기();
-        System.out.println(test.solution());
-
-    }
     public String solution(String[] table, String[] languages, int[] preference) {
         HashMap<String, HashMap<String, Integer>> map = new HashMap<>();
         for (int i = 0; i < table.length; i++) {
