@@ -19,10 +19,8 @@ class Codlity_greedy_MaxNonoverlappingSegments {
             if (B[lt] < A[rt]) {
                 result++;
                 lt = rt;
-                rt++;
-            } else {
-                rt++;
             }
+            rt++;
         }
         return result;
 
