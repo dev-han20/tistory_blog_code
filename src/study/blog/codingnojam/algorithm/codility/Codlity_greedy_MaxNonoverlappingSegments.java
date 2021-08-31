@@ -4,11 +4,14 @@ package study.blog.codingnojam.algorithm.codility;// you can also use imports, f
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class Codlity_greedy_MaxNonoverlappingSegments {
     public int solution(int[] A, int[] B) {
         // write your code in Java SE 8
 
-        if (A.length == 0) {
+        if (A.length == 0 || B.length==0) {
             return 0;
         }
         int r = 0;
