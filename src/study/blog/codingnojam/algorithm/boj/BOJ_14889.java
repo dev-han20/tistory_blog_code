@@ -18,7 +18,6 @@ public class BOJ_14889 {
     static int result = Integer.MAX_VALUE;
 
     public static void main(String[] args) throws Exception{
-
         // 정보 받기위한 객체
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

@@ -25,6 +25,7 @@
 
 - 문제풀이
 
+   - [[Algorithm] 백준 14889(BOJ 14889) 스타트와 링크 문제 풀이!!(Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_14889.java)
    - [[Algorithm] 백준 17140(BOJ 17140) 이차원 배열과 연산 문제풀이!! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_17140.java)
    - [[Algorithm] 백준 3190번(BOJ 3190) 뱀 문제풀이!! (java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_3190.java)
    - [[Algorithm] 백준 12100번(BOJ 12100) 2048(easy) 문제 풀이(Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_12100.java)
