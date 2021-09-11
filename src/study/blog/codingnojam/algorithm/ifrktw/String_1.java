@@ -2,7 +2,7 @@ package study.blog.codingnojam.algorithm.ifrktw;
 
 import java.util.Scanner;
 
-public class StringOne {
+public class String_1 {
 
     public static void main(String[] args) {
 
