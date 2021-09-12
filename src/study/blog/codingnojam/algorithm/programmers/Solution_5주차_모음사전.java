@@ -9,27 +9,16 @@ class Solution_5주차_모음사전 {
     LinkedList<String> list = new LinkedList<>();
 
     public int solution(String word) {
-
         recursion(0, word);
-
         return result;
     }
 
     public void recursion(int index, String word){
-
-        if (index == 5) {
-            return;
-        }
-
+        if (index == 5) return;
         for (int i = 0; i < words.length ; i++) {
-
             list.add(words[i]);
             count++;
-            if (String.join("",list).equals(word)) {
-//                System.out.println(count);
-//                System.out.println(String.join("",arr));
-                result = count;
-            }
+            if (String.join("",list).equals(word)) result = count;
             recursion(index + 1, word);
             list.removeLast();
         }
