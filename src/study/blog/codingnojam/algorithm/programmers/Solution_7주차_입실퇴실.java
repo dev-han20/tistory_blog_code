@@ -1,6 +1,6 @@
 package study.blog.codingnojam.algorithm.programmers;
 
-class Solution {
+class Solution_7주차_입실퇴실 {
     public int[] solution(int[] enter, int[] leave) {
         int[] stay = new int[enter.length + 1];
         int stayCount = 0;
