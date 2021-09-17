@@ -1,33 +1,15 @@
 package study.blog.codingnojam.algorithm.programmers;
 
 class Solution {
-    public int[] solution(int[] enter, int[] leave) {
-        int[] stay = new int[enter.length + 1];
-        int stayCount = 0;
-        int j = 0;
-        int[] result = new int[enter.length];
-        for (int i = 0; i < enter.length; i++) {
-            stay[enter[i]] = 1;
-            stayCount++;
-            if (stayCount >= 2) {
-                for (int k = 0; k < stay.length; k++) {
-                    if(stay[k] == 1){
-                        if (result[k - 1] == 0) {
-                            result[k - 1] = stayCount - 1;
-                        } else {
-                            result[k - 1]++;
-                        }
-                    }
-                }
-            }
+    public int solution(int n) {
 
-            while (j < leave.length && stay[leave[j]] == 1 ) {
-                stay[leave[j]] = 0;
-                stayCount--;
-                j++;
+        int[] dp = new int[n + 1];
+        dp[2] = 3;
+        for (int i = 3; i < dp.length; i++) {
+            if (i % 2 == 0) {
+                dp[i] = (dp[i-2] * 3 + 2) % 1000000007;
             }
         }
-
-        return result;
+        return dp[n];
     }
 }
