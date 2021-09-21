@@ -38,7 +38,6 @@ public class BOJ_16234 {
         int[] moveCol = {0, 0, -1, 1};          // 좌표 계산에 사용할 배열
         int result = 0;                         // 최종 결과값을 저장할 변수
 
-
         while (true) {
             int[][] chk = new int[N][N];    // BFS 방문처리에 사용할 배열
             boolean flag = false;           // 인구이동이 일어났는지 아닌지 체크하기 위한 변수
@@ -122,7 +121,6 @@ public class BOJ_16234 {
                 return;
             }
         }
-
     }
 
     // 국가를 표현할 클래스
