@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+// 미로의 최단거리 통로
 public class BFS_2 {
 
     public static void main(String[] args) {
