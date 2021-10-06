@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 
 class 카카오블라인드2019_실패율 {
 
@@ -15,13 +16,12 @@ class 카카오블라인드2019_실패율 {
     class Solution {
         public int[] solution(int N, int[] stages) {
             int playerCount = stages.length;
-            ArrayList<Stage> sList = new ArrayList<>();
-            ArrayList<Integer> iList = new ArrayList<>();
+            HashMap<Integer, Integer> sMap = new HashMap<>();
 
             for (int i = 0; i < stages.length; i++) {
-                iList.add(stages[i]);
+                sMap.put(stages[i], sMap.getOrDefault(stages[i], 0) + 1);
             }
-            Collections.sort(iList, Collections.reverseOrder());
+
 
 
             int[] answer = {};
