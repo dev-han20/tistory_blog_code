@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+// 백준온라인저지 17144번 미세먼지 안녕! 문제 풀이
 public class BOJ_17144 {
 	private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	private static int R, C, T;		// 집의 전체 행,열, 먼지확산 시간

@@ -25,6 +25,7 @@
 
 - 문제풀이
 
+   - [[Algorithm] 백준 17144(BOJ 17144) 미세먼지 안녕 문제 풀이!! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_17144.java)
    - [[Algorithm] 백준 4963(BOJ 4963) 섬의 개수 문제 풀이(Java)!!](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_4963.java)
    - [[Algorithm] 백준 16234번(BOJ 16234) 인구 이동 문제풀이!! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_16234.java)
    - [[Algorithm] 백준 14889(BOJ 14889) 스타트와 링크 문제 풀이!!(Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingnojam/algorithm/boj/BOJ_14889.java)
