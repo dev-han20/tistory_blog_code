@@ -21,6 +21,17 @@ public class BOJ_14500 {
             }
         }
 
+        int result = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                result = Math.max(result, (map[i][j] + map[i][j+1] + map[i+1][j], map[i+1][j+1);]
+            }
+        }
+
+
+
+
+
 
 
 
