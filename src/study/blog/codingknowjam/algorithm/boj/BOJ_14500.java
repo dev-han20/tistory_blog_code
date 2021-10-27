@@ -13,24 +13,36 @@ public class BOJ_14500 {
 	private static int[] arr = new int[6];
 
 	public static void main(String[] args) throws IOException {
+		// 입력을 빋는 객체
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+		// 행과 열 정보 입력받고 2차원 배열 생성
 		String[] NM = br.readLine().split(" ");
 		R = Integer.parseInt(NM[0]);
 		C = Integer.parseInt(NM[1]);
 		map = new int[R][C];
 
+		// 2차원 배열 맵 초기화
 		initMap(br);
 
+		// 행1 열4 형태로 구성된 테트로미노 값 연산
 		R1C4();
+		// 행4 열1 형태로 구성된 테트로미노 값 연산
 		R4C1();
+		// 행2 열2 형태로 구성된 테트로미노 값 연산
 		R2C2();
+		// 행2 열3 형태로 구성된 테트로미노 값 연산
 		R2C3();
+		// 행3 열2 형태로 구성된 테트로미노 값 연산
 		R3C2();
 
+		// 결과값 출력
 		System.out.println(result);
 	}
 
+	/**
+	 * 2차원 배열 초기화
+	 */
 	private static void initMap(BufferedReader br) throws IOException {
 		for (int i = 0; i < R; i++) {
 			String[] tempString = br.readLine().split(" ");
@@ -40,10 +52,18 @@ public class BOJ_14500 {
 		}
 	}
 
+	/**
+	 * 결과 값 갱신 메서드
+	 * otherResult와 result중 큰 값으로 갱신
+	 */
 	private static void updateResult(int otherResult) {
 		result = Math.max(result, otherResult);
 	}
 
+	/**
+	 * 파라미터 인덱스를 제외한 배열의 합 구하기
+	 * 6개의 칸을 가진 테트로미노들에서 사용
+	 */
 	private static int getSumTetromino(int firstIndex, int secondIndex, int[] arr) {
 		int sum = 0;
 		for (int i = 0; i < arr.length; i++) {
