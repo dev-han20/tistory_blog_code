@@ -142,29 +142,29 @@ public class BOJ_14500 {
 				arr[4] = map[i + 1][j + 1];
 				arr[5] = map[i + 1][j + 2];
 
-				otherResult = getSumTetromino(0, 2, arr);    //  □
-				updateResult(otherResult);                              		// □□□
+				otherResult = getSumTetromino(0, 2, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(3, 5, arr);    //  □
-				updateResult(otherResult);                              		// □□□
+				otherResult = getSumTetromino(3, 5, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(2, 3, arr);    // □□
-				updateResult(otherResult);                              		//  □□
+				otherResult = getSumTetromino(2, 3, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(0, 5, arr);    //  □□
-				updateResult(otherResult);                              		// □□
+				otherResult = getSumTetromino(0, 5, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(0, 1, arr);    //   □
-				updateResult(otherResult);                              		// □□□
+				otherResult = getSumTetromino(0, 1, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(1, 2, arr);    // □
-				updateResult(otherResult);                              		// □□□
+				otherResult = getSumTetromino(1, 2, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(4, 5, arr);    // □□□
-				updateResult(otherResult);                              		// □
+				otherResult = getSumTetromino(4, 5, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(3, 4, arr);    // □□□
-				updateResult(otherResult);                              		//   □
+				otherResult = getSumTetromino(3, 4, arr);
+				updateResult(otherResult);
 			}
 		}
 	}
@@ -184,37 +184,29 @@ public class BOJ_14500 {
 				arr[4] = map[i+2][j];
 				arr[5] = map[i+2][j+1];
 
-				otherResult = getSumTetromino(0, 4, arr);    //  □
-				updateResult(otherResult);                              		// □□
-																				//  □
+				otherResult = getSumTetromino(0, 4, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(1, 5, arr);    // □
-				updateResult(otherResult);                              		// □□
-																				// □
+				otherResult = getSumTetromino(1, 5, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(1, 4, arr);    // □
-				updateResult(otherResult);                              		// □□
-																				//  □
+				otherResult = getSumTetromino(1, 4, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(0, 5, arr);    //  □
-				updateResult(otherResult);                              		// □□
-																				// □
+				otherResult = getSumTetromino(0, 5, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(0, 2, arr);    //  □
-				updateResult(otherResult);                              		//  □
-																				// □□
+				otherResult = getSumTetromino(0, 2, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(1, 3, arr);    // □
-				updateResult(otherResult);                              		// □
-																				// □□
+				otherResult = getSumTetromino(1, 3, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(2, 4, arr);    // □□
-				updateResult(otherResult);                              		//  □
-																				//  □
+				otherResult = getSumTetromino(2, 4, arr);
+				updateResult(otherResult);
 
-				otherResult = getSumTetromino(3, 5, arr);    // □□
-				updateResult(otherResult);                              		// □
-																				// □
+				otherResult = getSumTetromino(3, 5, arr);
+				updateResult(otherResult);
 			}
 		}
 	}
