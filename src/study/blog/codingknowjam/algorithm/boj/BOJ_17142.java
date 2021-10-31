@@ -18,6 +18,15 @@ public class BOJ_17142 {
 		M = Integer.parseInt(NM[1]);
 		arr = new int[N][N];
 
+		for (int i = 0; i < N; i++) {
+			String[] temp = br.readLine().split(" ");
+			for (int j = 0; j < temp.length; j++) {
+				arr[i][j] = Integer.parseInt(temp[j]);
+			}
+		}
+
+
+
 
 
 
