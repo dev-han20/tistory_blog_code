@@ -1,4 +1,4 @@
-#### 안녕하세요 코딩노잼입니다.
+#### 안녕하세요 coding-knowjam입니다.
 #### 개인적으로 학습하기 위해 작성한 코드 및 Tistory 블로그에 포스팅한 Java 코드를 업로드합니다.
 
 ---
@@ -25,6 +25,7 @@
 
 - 문제풀이
 
+  - [[Algorithm] 백준 5639번(BOJ 5639) 이진검색트리 문제풀이! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_5639.java)
   - [[Algorithm] 백준 1655번(BOJ 1655) 가운데를 말해요 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_1655.java)
   - [[Algorithm] 백준 1107(BOJ 1107) 리모컨 문제풀이!! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_1107.java)
   - [[Algorithm] 백준 17142(BOJ 17142) 연구소 3 문제풀이! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_17142.java)
