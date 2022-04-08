@@ -25,6 +25,7 @@
 
 - 문제풀이
 
+  - [[Algorithm] 백준 1655번(BOJ 1655) 가운데를 말해요 (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_1655.java)
   - [[Algorithm] 백준 1107(BOJ 1107) 리모컨 문제풀이!! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_1107.java)
   - [[Algorithm] 백준 17142(BOJ 17142) 연구소 3 문제풀이! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_17142.java)
   - [[Algorithm] 백준 14500(BOJ 14500) 테트로미노 문제풀이!! (Java)](https://github.com/CodingNoJam/tistory_blog_code/blob/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_14500.java)
