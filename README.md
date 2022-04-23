@@ -24,7 +24,8 @@
   
 
 - 문제풀이
-
+  
+  - [[Algorithm] 백준 5014(BOJ 5014) 스타트링크 문제풀이!! (Java)](https://github.com/codingknowjam/tistory_blog_code/tree/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_5014.java)
   - [[Algorithm] 백준 2644(BOJ 2644) 촌수계산 문제풀이!! (Java)](https://github.com/codingknowjam/tistory_blog_code/tree/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_2644.java)
   - [[Algorithm] 백준 3085(BOJ 3085) 사탕 게임 문제풀이!! (Java)](https://github.com/codingknowjam/tistory_blog_code/tree/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_3085.java)
   - [[Algorithm] 백준 5639번(BOJ 5639) 이진검색트리 문제풀이! (Java)](https://github.com/codingknowjam/tistory_blog_code/tree/master/src/study/blog/codingknowjam/algorithm/boj/BOJ_5639.java)
